@@ -4,9 +4,12 @@
 	"version": "1.0.1",
 	"description": "Creates an electric unit object",
 	"license": "ISC",
-	"repository": "dabberio/electric-units",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
+	"homepage": "https://github.com/Diogny/electric-units",
+	"bugs": {
+		"url": "https://github.com/Diogny/electric-units/issues"
+	},
 	"keywords": [
 		"electric",
 		"units",
@@ -18,6 +21,10 @@
 		"no-test": "echo \"Error: no test specified\" && exit 1",
 		"test": "mocha --reporter spec",
 		"build": "tsc"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Diogny/electric-units.git"
 	},
 	"files": [
 		"lib/**/*"
