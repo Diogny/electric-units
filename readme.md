@@ -1,25 +1,25 @@
 
-#I'm using pnpm for a more efficient and clear package.json
+## I'm using pnpm for a more efficient and clear package.json
 
-#install development packajes
+## install development packajes
 
 	pnpm i mocha -D
 	pnpm i chai -D
 
 
-#build project
+## build project
 	pnpm run build
 
 
-#tests
+## tests
 	pnpm run test
 
 
-#git
+## git
 	>git init
 		Initialized empty Git repository in C:/Users/diogn/OneDrive/Projects/npm/electric-units/.git/
 
-#git add files
+## git add files
 	>git add package.json
 	>git add tsconfig.json
 	>git add dist/
@@ -27,9 +27,11 @@
 	>git add readme.md
 	>git add .gitignore
 
-#git first commit
+## git first commit
 	>git commit -m "first commit"
+	>git remote add origin https://github.com/Diogny/electric-units.git
+	>git push -u origin master
 
-#git next commits
-	git remote add origin https://github.com/Diogny/electric-units.git
-	git push -u origin master
+## git update
+	>git commit -m "update message"
+	>git push origin master
