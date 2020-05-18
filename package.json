@@ -1,7 +1,7 @@
 {
 	"name": "@dabberio/electric-units",
 	"author": "Diogny A. B. <diognyab@outlook.com>",
-	"version": "1.0.1",
+	"version": "1.0.3",
 	"description": "Creates an electric unit object",
 	"license": "ISC",
 	"main": "dist/index.js",
