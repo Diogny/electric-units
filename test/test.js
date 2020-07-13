@@ -7,7 +7,7 @@ var Unit = require('../dist/index').default;
 describe('Electric unit class test', () => {
 	let
 		unit = new Unit('2.5mW');
-
+	console.log(unit.toString());
 	it('should return 2.5', () => {
 		var result = unit.value;
 		expect(result).to.equal(2.5);
@@ -22,5 +22,5 @@ describe('Electric unit class test', () => {
 		var result = unit.unit;
 		expect(result).to.equal("W");
 	});
-	
+
 });

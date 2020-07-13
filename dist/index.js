@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Unit = /** @class */ (function () {
-    // typeof s === c.s
     function Unit(n) {
         var _this = this;
         this.toString = function () {
@@ -42,27 +41,27 @@ var Unit = /** @class */ (function () {
     Object.defineProperty(Unit.prototype, "name", {
         //get unit name and symbol
         get: function () { return Unit.unitNames[this.settings.unit]; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Unit.prototype, "unit", {
         get: function () { return Unit.unitSymbols[this.settings.unit]; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Unit.prototype, "prefix", {
         get: function () { return Unit.prefixSymbols[this.settings.prefix]; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Unit.prototype, "exponent", {
         get: function () { return Math.pow(10, Unit.prefixExponents[this.settings.prefix]); },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Unit.prototype, "value", {
         get: function () { return this.settings.value; },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     //self sufficient dummy

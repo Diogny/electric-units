@@ -1,11 +1,11 @@
 {
 	"name": "@dabberio/electric-units",
 	"author": "Diogny A. B. <diognyab@outlook.com>",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Creates an electric unit object",
 	"license": "ISC",
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"homepage": "https://github.com/Diogny/electric-units",
 	"bugs": {
 		"url": "https://github.com/Diogny/electric-units/issues"
@@ -31,6 +31,6 @@
 	],
 	"devDependencies": {
 		"chai": "^4.2.0",
-		"mocha": "^7.1.2"
+		"mocha": "^8.0.1"
 	}
 }
