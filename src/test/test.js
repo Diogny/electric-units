@@ -1,6 +1,6 @@
 'use strict';
 var expect = require('chai').expect;
-var Unit = require('../dist/index').default;
+var Unit = require('../dist/units').default;
 
 //console.log(Unit);
 

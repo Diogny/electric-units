@@ -1,11 +1,18 @@
 {
-	"name": "@dabberio/electric-units",
+	"name": "electric-units",
 	"author": "Diogny A. B. <diognyab@outlook.com>",
-	"version": "1.0.4",
+	"version": "1.0.7",
 	"description": "Creates an electric unit object",
-	"license": "ISC",
-	"main": "./dist/index.js",
-	"types": "./dist/index.d.ts",
+	"license": "MIT",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist/index.js",
+		"dist/index.d.ts",
+		"dist/units.js",
+		"dist/units.d.ts",
+		"dist/unitsjs.min.js"
+	],
 	"homepage": "https://github.com/Diogny/electric-units",
 	"bugs": {
 		"url": "https://github.com/Diogny/electric-units/issues"
@@ -18,19 +25,42 @@
 		"dabberio"
 	],
 	"scripts": {
-		"no-test": "echo \"Error: no test specified\" && exit 1",
 		"test": "mocha --reporter spec",
-		"build": "tsc"
+		"preinstall": "node -e \"!process.env.npm_config_user_agent.startsWith('pnpm/') && !console.log('Use \\`npx pnpm install\\` to install dependencies in this repository\\n') && process.exit(1)\"",
+		"build-ts": "tsc --noEmitHelpers --importHelpers",
+		"build-lib": "pnpm run build-ts && webpack --config webpack.lib.js"
 	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/Diogny/electric-units.git"
 	},
-	"files": [
-		"lib/**/*"
-	],
 	"devDependencies": {
+		"@babel/cli": "^7.10.5",
+		"@babel/core": "^7.11.4",
+		"@babel/plugin-proposal-class-properties": "^7.10.4",
+		"@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+		"@babel/preset-env": "^7.11.0",
+		"@babel/preset-typescript": "^7.10.4",
+		"babel-loader": "^8.1.0",
+		"core-js": "^3.6.5",
+		"webpack": "^4.44.1",
+		"webpack-cli": "^3.3.12",
+		"webpack-dev-middleware": "^3.7.2",
+		"webpack-merge": "^5.1.2",
+		"typescript": "^3.9.7",
 		"chai": "^4.2.0",
-		"mocha": "^8.0.1"
+		"mocha": "^8.1.1",
+		"@types/chai": "^4.2.12",
+		"@types/mocha": "^8.0.3",
+		"@types/node": "^14.6.0",
+		"css-loader": "^4.2.1",
+		"eslint": "^7.7.0",
+		"file-loader": "^6.0.0",
+		"terser-webpack-plugin": "^4.1.0",
+		"ts-loader": "^8.0.2",
+		"ts-node": "^9.0.0",
+		"tsconfig-paths-webpack-plugin": "^3.3.0",
+		"tslib": "^2.0.1",
+		"uglifyjs-webpack-plugin": "^2.2.0"
 	}
 }
